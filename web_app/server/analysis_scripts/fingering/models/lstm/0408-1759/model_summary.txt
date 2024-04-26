@@ -1,0 +1,37 @@
+model = Sequential(name='LSTM_model')
+    model.add(Input(shape=(maxlen, 3), name='Input_Layer'))
+    
+    # masking layer to omit paddings
+    model.add(Masking(mask_value=0., name='Masking_Layer'))
+    
+    model.add(LSTM(1024, return_sequences=True, name='LSTM_1'))
+    model.add(Dropout(0.2, name='Dropout_1'))
+    model.add(LSTM(1024, return_sequences=True, name='LSTM_2'))
+    model.add(Dropout(0.2, name='Dropout_2'))
+    model.add(LSTM(512, return_sequences=True, name='LSTM_3'))
+    model.add(Dropout(0.2, name='Dropout_3'))
+    
+    model.add(TimeDistributed(Dense(256, activation='relu'), name='Dense_1'))
+    model.add(TimeDistributed(Dense(num_classes, activation='softmax'), name='Output_Layer'))
+    
+    # learning rate decay
+    lr_schedule = keras.optimizers.schedules.ExponentialDecay(
+        initial_learning_rate=1e-2,
+        decay_steps=10000,
+        decay_rate=0.9
+    )
+    
+    model.compile(
+        loss="sparse_categorical_crossentropy", 
+        # optimizer=Adam(learning_rate=lr_schedule), 
+        optimizer=Adam(),
+        metrics=["accuracy"]
+    )
+
+50 epochs
+
+epochs = 50
+    maxlen = 128
+    num_features = 128  # number of midi notes
+    num_classes = 5
+    batch_size = 32

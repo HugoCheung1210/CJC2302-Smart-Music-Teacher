@@ -1,0 +1,17 @@
+    model = Sequential(name='LSTM_model')
+    model.add(Input(shape=(maxlen, 1), name='Input_Layer'))
+    
+    # masking layer to omit paddings
+    model.add(Masking(mask_value=0., name='Masking_Layer'))
+    
+    model.add(Bidirectional(LSTM(512, return_sequences=True), name='LSTM_1'))
+    model.add(Dropout(0.2, name='Dropout_1'))
+    
+    model.add(Bidirectional(LSTM(512, return_sequences=True), name='LSTM_2'))
+    model.add(Dropout(0.2, name='Dropout_2'))
+    
+    model.add(TimeDistributed(Dense(num_classes, activation='softmax'), name='Output_Layer'))
+
+input [1, 1, 1, 1, 1]
+output [2, 3, 1, 2, 4]
+- reasonable (finger switch), but not perfect

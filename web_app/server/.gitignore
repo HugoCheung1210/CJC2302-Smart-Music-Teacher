@@ -1,0 +1,13 @@
+**.h5
+**.keras
+**.hdf5
+**.pb
+**/__pycache__
+*.h5
+*.keras
+**/model
+**.mp4
+
+**/emotion/*
+**/style/*
+.env

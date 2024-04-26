@@ -1,0 +1,5 @@
+training time: ~7hr
+training acc: 0.7933
+loss: 0.2240
+val acc: 0.6304
+loss: 1.3759

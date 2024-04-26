@@ -1,0 +1,4 @@
+DB_URL=<db_connection_string>
+PROJECT_ROOT=
+CONDA_PATH=<local_path>\\anaconda3\\envs\\<env_name>\\python.exe
+MUSESCORE_PATH=<local_path>\\MuseScore 4\\bin\\MuseScore4.exe

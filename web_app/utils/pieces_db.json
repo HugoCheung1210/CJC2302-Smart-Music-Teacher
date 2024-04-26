@@ -1,0 +1,62 @@
+[
+{
+    "name": "Twinkle Twinkle Little Star",
+    "composer": "Unknown",
+    "description": "A beloved children's melody often taught to beginner piano learners.",
+	"pdf_name": "twinkle.pdf"
+}
+,
+{
+    "name": "Mary Had a Little Lamb",
+    "composer": "Unknown",
+    "description": "A simple and popular nursery rhyme, often used as an introductory piece for piano learners."
+}
+,
+{
+    "name": "Ode to Joy",
+    "composer": "Ludwig van Beethoven",
+    "description": "A well-known melody from Beethoven's Symphony No. 9, often played by piano learners due to its recognizable and uplifting nature."
+}
+,
+{
+    "name": "Minuet in D Minor",
+    "composer": "Johann Sebastian Bach",
+    "description": "A charming and elegant minuet by Bach, suitable for intermediate piano learners."
+}
+,
+{
+    "name": "Canon in D",
+    "composer": "Johann Pachelbel",
+    "description": "A timeless and popular baroque piece, frequently chosen by piano learners for its beautiful harmonies and melodic progression."
+}
+,
+{
+    "name": "Air on the G String",
+    "composer": "Johann Sebastian Bach",
+    "description": "A serene and delicate piece from Bach's orchestral suite No. 3, often arranged for piano and enjoyed by learners for its soothing qualities."
+}
+,
+{
+    "name": "Für Elise",
+    "composer": "Ludwig van Beethoven",
+    "description": "A famous classical piano piece composed by Ludwig van Beethoven, characterized by its memorable melody and moderate difficulty, making it a popular choice for piano learners.",
+	"pdf_name": "fur_elise.pdf"
+}
+,
+{
+    "name": "Goldberg Variations Aria",
+    "composer": "Johann Sebastian Bach",
+    "description": "The beautiful and introspective opening theme of Bach's Goldberg Variations, often explored by advanced piano learners for its technical and expressive challenges."
+}
+,
+{
+    "name": "Moonlight Sonata (1st Movement)",
+    "composer": "Ludwig van Beethoven",
+    "description": "The hauntingly beautiful and emotionally evocative first movement of Beethoven's Moonlight Sonata, frequently studied by intermediate to advanced piano learners."
+}
+,
+{
+    "name": "Clair de Lune",
+    "composer": "Claude Debussy",
+    "description": "A dreamy and impressionistic piece from Debussy's Suite bergamasque, admired by piano learners for its ethereal atmosphere and delicate nuances."
+}]

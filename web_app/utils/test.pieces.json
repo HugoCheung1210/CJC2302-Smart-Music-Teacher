@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "65d506a054cb44a582166fde"
+  },
+  "name": "Twinkle Twinkle Little Star",
+  "composer": "Unknown",
+  "description": "A beloved children's melody often taught to beginner piano learners.",
+  "pdf_name": "twinkle.pdf",
+  "pieceId": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d506a954cb44a582166fe1"
+  },
+  "name": "Mary Had a Little Lamb",
+  "composer": "Unknown",
+  "description": "A simple and popular nursery rhyme, often used as an introductory piece for piano learners.",
+  "pieceId": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d506af54cb44a582166fe5"
+  },
+  "name": "Ode to Joy",
+  "composer": "Ludwig van Beethoven",
+  "description": "A well-known melody from Beethoven's Symphony No. 9, often played by piano learners due to its recognizable and uplifting nature.",
+  "pieceId": 3,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d506b254cb44a582166fe9"
+  },
+  "name": "Für Elise",
+  "composer": "Ludwig van Beethoven",
+  "description": "A famous classical piano piece composed by Ludwig van Beethoven, characterized by its memorable melody and moderate difficulty, making it a popular choice for piano learners.",
+  "pdf_name": "fur_elise.pdf",
+  "pieceId": 4,
+  "__v": 0
+}]
