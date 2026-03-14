@@ -14,9 +14,58 @@ examines the emotional changes in a music recording, utilizing a valence-arousal
 for the music piece analysis functions, they classify the music style, recreate it in a different
 style, and generate piano fingerings to facilitate users in playing the piece effectively.
 
-This Paper was published at the UbiMus2024 Conference
+This Paper was published at the UbiMus2024 Conference 
 
 ## Novelty functions
+This project explores the feasibility and effectiveness of building a web application
+as an affordable and accessible aid or even an alternative to conventional piano
+classes. By referencing to the studies of ecologically grounded musical creative practices
+[De Lima et al. 2017], in particular the time tagging creativity support metaphor
+[de Farias et al. 2015, Keller et al. 2013, da Silva et al. 2013], we hope to provide a prototype
+of creativity-centered design that is not bounded for geographical limitation to
+foster creative musical experiences in everyday environment. It helps users independently
+improve their ability to play the piano and learn musicality through analysis of
+recorded piano performances, with results and analytics in an understandable and meaningful
+way. For interactivity, instead of illustrations we have a demo video of the application
+at ``https://bit.ly/smartPianoTeacher``.
+
+### Performance Analysis
+As shown in Figure 1, this analysis component transcribes users’ piano performance
+videos to extract pitches, fingering, tempo, and dynamics information, and then presents
+them along with the video in an intuitive manner combining transcribed piano scores with
+line and polar charts. Also, it quantifies and evaluates criteria including pitch accuracy,
+dynamic consistency, tempo stability, and piano fingering, presenting them in both numeric
+scores out of 100 (as in Figure 2), and detailed charts for more advanced users.
+Alongside with an overview page that lists out all past performance scores of each piece,
+users can easily understand their practice progress and improvements along the way.
+
+The piano fingering is extracted by combining piano key segmentation and finger
+tracking. The system automatically segments each piano key from a top-view video using
+edge detection, Hough line transformation, and connected components extraction as suggested
+by [Goodwin and Green 2013]. It is further improved by incorporating knowledge
+of the standard piano keyboard structure to reach over 95% accuracy when tested in various
+venues with different keyboard and lighting. Each finger’s coordinates are extracted
+using Mediapipe’s pre-trained model, and mapped back to the piano key location.
+
+
+For dynamics extraction, we track amplitude changes by applying 0.5-second windowing
+to the audio, and calculate the peak of the absolute of the waveform for each
+frame. These peaks represent the maximum amplitude every 0.5 seconds of the audio.
+For tempo detection, by using the onset detection function with Python library
+librosa, we could only obtain the global BPM of the audio. However, even if we tried
+to calculate the local BPM by splitting the audio into frames, the result fluctuates as there
+is insufficient onset information within one frame. Therefore, we design overlapping
+windows for the calculation of the local BPM.
+
+
+For pitch detection, we first apply a sliding window to split the audio into equal
+parts. Referencing the YIN algorithm, we obtain pitch information by applying parabolic
+interpolation to each of the mel-spectrograms computed from each window. We find out
+exactly when each note or chord was being played with onset detection functions. The
+hand-tracking information can be used to filter falsely detected notes that were out of the
+piano key positions of each finger in that time stamp, effectively eliminating octave errors.
+
+
 ### Emotion Analysis
 This component visualizes the feeling conveyed throughout the recording to nurture musicality
 and appreciation. The valence-arousal model is used thanks to its continuous
